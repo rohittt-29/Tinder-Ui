@@ -10,8 +10,10 @@ const Login = () => {
    
     const [emailId, setemailid] = useState("rohit@gmail.com");
     const [password , setpassword] = useState("Rohit@123");
+    const [error , seterror] = useState("")
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
 
     const handleLogin = async()=>{
         try{
@@ -23,11 +25,13 @@ const Login = () => {
    });
 
    dispatch(addUser(res.data));
+   return navigate('/');
         }
         catch(err){
-      console.log(err);
+          seterror(err.response.data)
+  
         }
-        navigate("/")
+        // navigate("/")
     }
 
   return (
@@ -63,6 +67,7 @@ const Login = () => {
 </fieldset>
 
     </div>
+    <p className='text-red-700'>{error}</p>
    
     <div className="card-actions justify-center">
       <button className="bg-[#7A1CAC] py-2 mt-2 font-medium px-6 rounded-sm cursor-pointer hover:bg-[#6b1cac]" onClick={handleLogin}>Login</button>
