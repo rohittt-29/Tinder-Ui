@@ -28,7 +28,7 @@ const Login = () => {
    return navigate('/');
         }
         catch(err){
-          seterror(err.response.data)
+          seterror(err?.response?.data)
   
         }
         // navigate("/")
