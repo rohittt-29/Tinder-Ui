@@ -22,8 +22,8 @@ const Connections = () => {
     },[])
 
     if(!connection) return;
-    if(connection.length === 0) return <h1 className="relative mx-auto mt-24 w-fit bg-gradient-to-r from-indigo-700 via-purple-600 cursor-pointer text-white text-xl md:text-3xl px-8 py-5 rounded-3xl font-extrabold shadow-xl flex items-center gap-4 animate-bounce hover:animate-spin-slow transition-all duration-700 hover:scale-105 hover:shadow-purple-500/60">
-  Bhai, abhi tak koi connection nahi mila...
+    if(connection.length === 0) return <h1 className="relative mx-auto mt-24 w-fit  cursor-pointer text-white text-xl md:text-3xl px-8 py-5 rounded-3xl font-extrabold shadow-xl flex items-center gap-4 animate-bounce hover:animate-spin-slow transition-all duration-700 hover:scale-105 hover:shadow-purple-500/60">
+ No Connections Found
   <img 
     src="https://em-content.zobj.net/source/animated-noto-color-emoji/356/crying-face_1f622.gif" 
     alt="crying emoji"
@@ -42,7 +42,7 @@ const Connections = () => {
             const {_id,firstName, lastName , photoUrl, age , gender, about} = con;
             return(
                 <div key={_id} className=' flex m-4 p-4 rounded-lg bg-base-300 mb-5 w-1/2 mx-auto'>
-                 <div>   <img src={photoUrl} alt="photo" className='w-15 h-15 rounded-full' /></div>
+                 <div>   <img src={photoUrl} alt="photo" className='w-15 h-15 rounded-full ' /></div>
                  <div className='mx-3 text-left'>
                     <h2 className='font-bold text-2xl'>{firstName+ " " + lastName}</h2>
                   {age && gender && <h3>{age + ", " + gender}</h3>}
