@@ -34,7 +34,9 @@ const Body = () => {
     <div>
       
       <Navbar/>
+      <div className='mb-20'>
       <Outlet/>
+      </div>
       <Footer/>
       
     </div>
