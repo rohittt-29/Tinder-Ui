@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/UserSlice';
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../utils/Constant';
-
+import Bg from "../assets/Bg.png"
 
 const Login = () => {
    
@@ -36,7 +36,11 @@ const Login = () => {
 
   return (
     <div className='flex justify-center mt-5'>
-    <div className="card bg-base-200 w-96 shadow-sm rounded-lg">
+  <div className='fixed  inset-0 -z-10  bg-gradient-to-b from-black  '>
+      <img className=' w-full  h-screen object-cover  bg-black ' src= {Bg}alt='bg'/>
+    </div>
+      <div className='absolute top-0 left-0 w-full h-full bg-black/40 -z-10'></div>
+    <div className="card bg-base-200 w-96 shadow-sm rounded-lg border-4 border-gray-400 ">
   <div className="card-body ">
     <h2 className=" text-xl w-full  text-center">Login</h2>
     <div>
