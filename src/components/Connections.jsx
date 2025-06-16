@@ -41,15 +41,21 @@ const Connections = () => {
         {connection.map((con)=>{
             const {_id,firstName, lastName , photoUrl, age , gender, about} = con;
             return(
-                <div key={_id} className=' flex m-4 p-4 rounded-lg bg-base-300 mb-5 w-1/2 mx-auto'>
-                 <div>   <img src={photoUrl} alt="photo" className='w-15 h-15 rounded-full ' /></div>
-                 <div className='mx-3 text-left'>
-                    <h2 className='font-bold text-2xl'>{firstName+ " " + lastName}</h2>
-                  {age && gender && <h3>{age + ", " + gender}</h3>}
-                   
-                    <p className='italic text-xl text-gray-400' >{about}</p>
-                    </div>
-                </div>
+            <div key={_id} className='flex items-start m-4 p-4 rounded-lg bg-base-300 mb-5 w-1/2 mx-auto'>
+  <div className='w-[60px] h-[60px] flex-shrink-0'>
+    <img
+      src={photoUrl}
+      alt="photo"
+      className='w-full h-full object-cover rounded-full'
+    />
+  </div>
+  <div className='mx-3 text-left'>
+    <h2 className='font-bold text-2xl'>{firstName + " " + lastName}</h2>
+    {age && gender && <h3>{age + ", " + gender}</h3>}
+    <p className='italic text-xl text-gray-400'>{about}</p>
+  </div>
+</div>
+
             )
         })}
      </div>
