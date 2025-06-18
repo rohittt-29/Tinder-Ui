@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BASE_URL } from '../utils/Constant';
 import { Link, useNavigate } from 'react-router-dom';
 import { removeUser } from '../utils/UserSlice';
+import Logo from "../assets/Logo.svg"
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -27,14 +28,17 @@ const Navbar = () => {
   }
 
   return (
- <div className="navbar bg-base-300 shadow-sm  z-1 ">  
-   <div className="flex-1">
-        {/* Always show logo, but conditionally make it clickable */}
-        {user ? (
-          <Link to='/' className="btn btn-ghost text-xl">daisyUI</Link>
-        ) : (
-          <span className="btn btn-ghost text-xl opacity-100 cursor-default">daisyUI</span>
-        )}
+ <div className="navbar bg-gradient-to-b from-black shadow-sm  z-1 ">  
+   <div className="flex-1 p-6">
+     {user ? (
+  <Link to='/' className="text-xl">
+    <img src={Logo} alt="App Logo" className="h-10" />
+  </Link>
+) : (
+  <span className="text-xl opacity-100 cursor-default">
+    <img src={Logo} alt="App Logo" className="h-10 " />
+  </span>
+)}
    </div>
    <div className="flex gap-2">
     
@@ -52,7 +56,7 @@ const Navbar = () => {
        </div>
        <ul
          tabIndex={0}
-         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+         className="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
          <li>
            <Link to='/profile' className="justify-between">
              Profile

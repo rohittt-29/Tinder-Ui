@@ -20,7 +20,25 @@ const EditProfile = ({user}) => {
       const [about , setabout] = useState(user.about);
       const [toast, settoast] = useState(false)
 
-    const [error , seterror] = useState("")
+    const [error , seterror] = useState("");
+    const handleImageUpload = async (e) => {
+  const file = e.target.files[0];
+  const formData = new FormData();
+
+  formData.append("file", file);
+  formData.append("upload_preset", "My-Tinder"); // 👈 Replace this
+  formData.append("cloud_name", "dp8jqeure");       // 👈 Replace this
+
+  try {
+    const res = await axios.post(
+      "https://api.cloudinary.com/v1_1/dp8jqeure/image/upload", // 👈 Replace this
+      formData
+    );
+    setphotoUrl(res.data.secure_url);
+  } catch (err) {
+    seterror("Image upload failed");
+  }
+};
   
     const dispatch = useDispatch()
   const saveProfile = async()=>{
@@ -54,7 +72,7 @@ const EditProfile = ({user}) => {
 
   return (
    <>
-  <div className="flex flex-col lg:flex-row justify-center items-start gap-10 p-6 max-w-7xl my-20 mx-auto">
+  <div className="flex flex-col lg:flex-row justify-center items-start gap-10 p-6 max-w-7xl  mx-auto">
     
     {/* Left: Edit Form */}
     <div className="w-full lg:w-2/3">
@@ -85,15 +103,18 @@ const EditProfile = ({user}) => {
   </div>
 
   {/* Photo URL */}
-  <div>
-    <label className="label">Photo URL</label>
-    <input
-      type="text"
-      value={photoUrl}
-      className="input input-bordered w-full"
-      onChange={(e) => setphotoUrl(e.target.value)}
-    />
-  </div>
+ {/* Photo URL */}
+<div>
+  <label className="label">Upload Profile Photo</label>
+  <input
+    type="file"
+    accept="image/*"
+    className="file-input file-input-bordered w-full"
+    onChange={handleImageUpload}
+  />
+
+</div>
+
 
   {/* Age */}
   <div>
@@ -207,3 +228,25 @@ const EditProfile = ({user}) => {
   )
 }
 export default EditProfile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,23 +19,34 @@ const UserCard = ({user}) => {
    }
    
   return (
-   <div className="card bg-base-200 w-86  shadow-sm">
-  <figure>
+ <div className="flex flex-col items-center mb-50">
+  {/* User Card */}
+  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shadow-lg relative">
     <img
       src={photoUrl}
-      alt="photo" />
-  </figure>
-  <div className="card-body">
-    <h2 className="Name text-3xl text-white font-semibold">{firstName+ " " + lastName}</h2>
-    <p className='text-xl text-white/70 '>{about}</p>
-{age && gender && <p>{age + " , " + gender}</p>}
-    <div className="card-actions justify-center mt-8 gap-5">
-<div className='w-25 h-25 flex items-center justify-center text-rose-500 text-6xl rounded-full bg-gray-300  cursor-pointer hover:bg-gray-400 hover:scale-110 transition duration-200 ' onClick={()=>handleRequest("ignored", _id)}>
-   <i className="ri-close-fill hover:scale-150 transition duration-200"></i>
+      alt="User"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3">
+      <h2 className="text-white text-2xl font-bold">
+        {firstName} {lastName}{age && `, ${age}`}
+      </h2>
+    </div>
   </div>
-  <div className='w-25 h-25 flex items-center justify-center text-white text-6xl rounded-full bg-rose-600 cursor-pointer hover:bg-rose-700 hover:scale-110 transition duration-200' onClick={()=>handleRequest("interested", _id)}>
-    <i className="ri-heart-3-fill hover:scale-150 transition duration-200"></i>
-  </div>
+
+  {/* Like / Dislike Buttons Outside Card */}
+  <div className="flex justify-center gap-10 mt-6">
+    <div
+      className="w-16 h-16 flex items-center justify-center text-rose-500 text-4xl rounded-full bg-gray-300 cursor-pointer hover:bg-gray-400 hover:scale-110 transition duration-200"
+      onClick={() => handleRequest("ignored", _id)}
+    >
+      <i className="ri-close-fill"></i>
+    </div>
+    <div
+      className="w-16 h-16 flex items-center justify-center text-white text-4xl rounded-full bg-rose-600 cursor-pointer hover:bg-rose-700 hover:scale-110 transition duration-200"
+      onClick={() => handleRequest("interested", _id)}
+    >
+      <i className="ri-heart-3-fill"></i>
     </div>
   </div>
 </div>
