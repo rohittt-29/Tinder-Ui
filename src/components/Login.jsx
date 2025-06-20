@@ -59,13 +59,12 @@ const Login = () => {
   className="absolute inset-0 -z-10 animate-[bgPulse_6s_ease-in-out_infinite]"
   style={{
     backgroundImage: `
-      radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1), transparent 90%),
-      linear-gradient(to right, rgba(255, 255, 255, 0.1) 2px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 2px, transparent 1px)
+      linear-gradient(to right, rgba(30, 64, 175, 0.2) 2px, transparent 1px),
+      linear-gradient(to bottom, rgba(30, 64, 175, 0.2) 2px, transparent 1px)
     `,
-    backgroundSize: '100% 100%, 40px 40px, 40px 40px',
+    backgroundSize: '40px 40px',
     backgroundColor: '#0a0a0a',
-    filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.05))',
+    filter: 'drop-shadow(0 0 10px rgba(30, 64, 175, 0.1))',
   }}
 />
       <div className='absolute top-0 left-0 w-full h-full bg-black/40 -z-10'></div>

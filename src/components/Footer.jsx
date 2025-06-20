@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-base-100  bg-gradient-to-tl from-purple-600/10 text-neutral-content px-4 py-6   fixed bottom-0 p-4">
+    <footer className="w-full bg-base-100  bg-gradient-to-tl from-purple-600/15 text-neutral-content px-4 py-6   fixed bottom-0 p-4">
       
       {/* Top Left - Copyright */}
       <div className="absolute top-2 left-4 font-semibold text-sm md:text-base">
