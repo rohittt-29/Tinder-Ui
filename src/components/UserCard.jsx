@@ -39,12 +39,14 @@ const UserCard = ({user}) => {
     <div
       className="w-16 h-16 flex items-center justify-center text-rose-500 text-4xl rounded-full bg-gray-300 cursor-pointer hover:bg-gray-400 hover:scale-110 transition duration-200"
       onClick={() => handleRequest("ignored", _id)}
+        onTouchStart={() => handleRequest("ignored", _id)}
     >
       <i className="ri-close-fill"></i>
     </div>
     <div
       className="w-16 h-16 flex items-center justify-center text-white text-4xl rounded-full bg-rose-600 cursor-pointer hover:bg-rose-700 hover:scale-110 transition duration-200"
       onClick={() => handleRequest("interested", _id)}
+     onTouchStart={() => handleRequest("interested", _id)}
     >
       <i className="ri-heart-3-fill"></i>
     </div>

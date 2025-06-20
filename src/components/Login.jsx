@@ -86,7 +86,7 @@ const Login = () => {
 
 
       <div className='absolute top-0 left-0 w-full h-full bg-black/40 -z-10'></div>
-<div className="card w-96 bg-gray-1000 backdrop-blur-md border-2 border-gray-800 shadow-lg -z-0 rounded-lg md:mt-2 mt-20 ]">
+<div className="card w-96 bg-gray-1000 backdrop-blur-md border-2 border-gray-800 shadow-lg -z-0 rounded-lg md:mt-2 mt-13 ]">
 
 
   <div className="card-body ">
