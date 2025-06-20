@@ -67,8 +67,26 @@ const Login = () => {
     filter: 'drop-shadow(0 0 10px rgba(30, 64, 175, 0.1))',
   }}
 />
+
+ <div className="absolute  hidden lg:block inset-0 -z-10">
+   {/* Floating Cards */}
+  <div className="absolute top-[430px] left-[200px] transform rotate-10 bg-white/10 text-white backdrop-blur-sm px-4 py-4 rounded-lg shadow-md animate-float-slow">
+   💘 Looking for Love
+ </div>
+   <div className="absolute top-[230px] left-[1200px] bg-white/10   rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-medium">
+     🧠 Deep Conversations
+   </div>
+    <div className="absolute top-[180px] left-[28px] bg-white/10   -rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-medium">
+   🍿	Movie Buddy
+   </div>
+   <div className="absolute top-[500px] left-[1200px] -rotate-12 bg-white/10 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast">
+🗺️	Explore Together
+   </div>
+ </div>
+
+
       <div className='absolute top-0 left-0 w-full h-full bg-black/40 -z-10'></div>
-<div className="card w-96 bg-black/50 backdrop-blur-md border border-rose-400 shadow-lg z-10 rounded-lg animate-[pulseBorder_3s_ease-in-out_infinite]">
+<div className="card w-96 bg-gray-1000 backdrop-blur-md border-2 border-gray-800 shadow-lg -z-0 rounded-lg md:mt-2 mt-20 ]">
 
 
   <div className="card-body ">
@@ -139,3 +157,28 @@ const Login = () => {
 }
 
 export default Login
+
+
+
+
+
+
+
+
+
+
+// <div className="absolute  hidden lg:block inset-0 -z-10">
+//   {/* Floating Cards */}
+//  <div className="absolute top-[430px] left-[200px] transform rotate-10 bg-white/10 text-white backdrop-blur-sm px-4 py-4 rounded-lg shadow-md animate-float-slow">
+//   💘 Looking for Love
+// </div>
+//   <div className="absolute top-[230px] left-[1200px] bg-white/10   rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-medium">
+//     🧠 Deep Conversations
+//   </div>
+//    <div className="absolute top-[180px] left-[28px] bg-white/10   -rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-medium">
+//   🍿	Movie Buddy
+//   </div>
+//   <div className="absolute top-[500px] left-[1200px] -rotate-12 bg-white/10 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast">
+//     🎮 Game & Chill
+//   </div>
+// </div>

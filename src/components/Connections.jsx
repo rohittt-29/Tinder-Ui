@@ -36,12 +36,12 @@ const Connections = () => {
 
   return (
     <div>
-     <div className=' text-center my-10'>
-        <h1 className='font-bold bg-purple-500 w-fit mx-auto italic p-2 rounded-bl-2xl rounded-tr-2xl text-3xl bg-gradient-to-l from-purple-900'>Connections</h1>
+     <div className=' text-center my-30'>
+        <h1 className='font-bold  w-fit mx-auto italic p-2  text-3xl  border-b-2 border-purple-600 bg-gradient-to-l '>Connections</h1>
         {connection.map((con)=>{
             const {_id,firstName, lastName , photoUrl, age , gender, about} = con;
             return(
-            <div key={_id} className='flex items-start m-4 p-4 rounded-lg bg-base-300 mb-5 w-1/2 mx-auto'>
+            <div key={_id} className='flex items-start m-4 p-4  rounded-lg border-1 border-gray-800 bg-base-200 mb-5 w-1/2 mx-auto'>
   <div className='w-[60px] h-[60px] flex-shrink-0'>
     <img
       src={photoUrl}

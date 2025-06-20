@@ -47,11 +47,11 @@ const Requests = () => {
     
     <div>
      <div className=' text-center my-3 mb-40 md:my-10'>
-        <h1 className='font-bold bg-purple-500 w-fit  mx-auto italic mb-4 px-4 py-2 md:p-2 rounded-bl-2xl rounded-tr-2xl text-xl md:text-3xl bg-gradient-to-l from-purple-900'>Requests</h1>
+        <h1 className='font-bold  w-fit  mx-auto italic mb-4 px-4 py-2 md:p-2 text-xl md:text-3xl border-b-2 border-purple-600'>Requests</h1>
         {request.map((req)=>{
             const {_id,firstName, lastName , photoUrl, age , gender, about} = req.fromUserId;
             return(
-              <div key={_id} className='relative flex flex-col md:m-4 mx-2  p-2 md:p-4 rounded-lg bg-base-300 mb-5 md:w-1/2 md:mx-auto'>
+              <div key={_id} className='relative flex flex-col md:m-4 mx-2  p-2 md:p-4 rounded-lg border-1 border-gray-800 bg-base-200 mb-5 md:w-1/2 md:mx-auto'>
   <div className='flex items-start gap-4'>
    <div className='w-[30px] h-[30px] md:w-[60px] md:h-[60px] flex-shrink-0'>
       <img src={photoUrl} alt="photo" className='w-full h-full object-cover rounded-full' />
