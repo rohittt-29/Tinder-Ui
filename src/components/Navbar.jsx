@@ -29,14 +29,14 @@ const Navbar = () => {
 
   return (
  <div className="navbar bg-gradient-to-b from-black shadow-sm  z-1 ">  
-   <div className="flex-1 p-6">
+   <div className="flex-1 flex justify-center md:justify-start items-center  p-6">
      {user ? (
   <Link to='/' className="text-xl">
-    <img src={Logo} alt="App Logo" className="h-10" />
+    <img src={Logo} alt="App Logo" className="md:h-9 h-10" />
   </Link>
 ) : (
   <span className="text-xl opacity-100 cursor-default">
-    <img src={Logo} alt="App Logo" className="h-10 " />
+    <img src={Logo} alt="App Logo" className="md:h-9 h-10  " />
   </span>
 )}
    </div>

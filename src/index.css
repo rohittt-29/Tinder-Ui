@@ -2,3 +2,14 @@
 @plugin "daisyui" {
   themes: all;
 }
+@keyframes bgPulse {
+  0%, 100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.1));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.3));
+  }
+}
+

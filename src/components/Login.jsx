@@ -54,12 +54,24 @@ const Login = () => {
     }
 
   return (
-    <div className='flex justify-center mt-5'>
-  <div className='fixed  inset-0 -z-10  bg-gradient-to-b from-black  '>
-      <img className=' w-full  h-screen object-cover  bg-black ' src= {Bg}alt='bg'/>
-    </div>
+    <div className='flex justify-center  mb-5'>
+<div
+  className="absolute inset-0 -z-10 animate-[bgPulse_6s_ease-in-out_infinite]"
+  style={{
+    backgroundImage: `
+      radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1), transparent 90%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 2px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 2px, transparent 1px)
+    `,
+    backgroundSize: '100% 100%, 40px 40px, 40px 40px',
+    backgroundColor: '#0a0a0a',
+    filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.05))',
+  }}
+/>
       <div className='absolute top-0 left-0 w-full h-full bg-black/40 -z-10'></div>
-    <div className="card bg-base-200 w-96 shadow-sm rounded-lg border-4 border-gray-400 ">
+<div className="card w-96 bg-black/50 backdrop-blur-md border border-rose-400 shadow-lg z-10 rounded-lg animate-[pulseBorder_3s_ease-in-out_infinite]">
+
+
   <div className="card-body ">
     <h2 className=" text-xl w-full  text-center">{signup? "SignUp": "Login"}</h2>
     <div>

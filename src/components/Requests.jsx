@@ -46,19 +46,19 @@ const Requests = () => {
   return (
     
     <div>
-     <div className=' text-center my-10'>
-        <h1 className='font-bold bg-purple-500 w-fit mx-auto italic p-2 rounded-bl-2xl rounded-tr-2xl text-3xl bg-gradient-to-l from-purple-900'>Requests</h1>
+     <div className=' text-center my-3 mb-40 md:my-10'>
+        <h1 className='font-bold bg-purple-500 w-fit  mx-auto italic mb-4 px-4 py-2 md:p-2 rounded-bl-2xl rounded-tr-2xl text-xl md:text-3xl bg-gradient-to-l from-purple-900'>Requests</h1>
         {request.map((req)=>{
             const {_id,firstName, lastName , photoUrl, age , gender, about} = req.fromUserId;
             return(
-              <div key={_id} className='relative flex flex-col m-4 p-4 rounded-lg bg-base-300 mb-5 w-1/2 mx-auto'>
+              <div key={_id} className='relative flex flex-col md:m-4 mx-2  p-2 md:p-4 rounded-lg bg-base-300 mb-5 md:w-1/2 md:mx-auto'>
   <div className='flex items-start gap-4'>
-    <div className='w-[60px] h-[60px] flex-shrink-0'>
+   <div className='w-[30px] h-[30px] md:w-[60px] md:h-[60px] flex-shrink-0'>
       <img src={photoUrl} alt="photo" className='w-full h-full object-cover rounded-full' />
     </div>
 
     <div className='text-left flex-1'>
-      <h2 className='font-bold text-2xl'>{firstName + " " + lastName}</h2>
+      <h2 className='font-normal md:font-bold text-xl md:text-2xl'>{firstName + " " + lastName}</h2>
       {age && gender && <h3>{age + ", " + gender}</h3>}
       <p className='italic text-xl text-gray-400 break-words mt-1'>
          {about.length > 150 ? about.slice(0, 150) + '...' : about}
@@ -67,15 +67,15 @@ const Requests = () => {
   </div>
 
   {/* Buttons aligned to bottom right */}
-  <div className='flex justify-end gap-3 mt-4'>
+  <div className='flex justify-end gap-2 md:gap-3 mt-2 md:mt-4'>
     <div
-      className='w-15 h-15 flex items-center justify-center text-rose-500 text-3xl rounded-full bg-gray-300 cursor-pointer hover:bg-gray-400 hover:scale-110 transition duration-200'
+      className='w-10 h-10 md:w-15 md:h-15 flex items-center justify-center text-rose-500 text-3xl rounded-full bg-gray-300 cursor-pointer hover:bg-gray-400 hover:scale-110 transition duration-200'
       onClick={() => reviewRequest("rejected", req._id)}
     >
       <i className="ri-close-fill  hover:scale-150 transition duration-200"></i>
     </div>
     <div
-      className='w-15 h-15 flex items-center justify-center text-white text-3xl rounded-full bg-rose-600 cursor-pointer hover:bg-rose-700 hover:scale-110 transition duration-200'
+      className='w-10 h-10  md:w-15 md:h-15 flex items-center justify-center text-white text-3xl rounded-full bg-rose-600 cursor-pointer hover:bg-rose-700 hover:scale-110 transition duration-200'
       onClick={() => reviewRequest("accepted", req._id)}
     >
       <i className="ri-heart-3-fill  hover:scale-150 transition duration-200"></i>
