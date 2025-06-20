@@ -79,7 +79,7 @@ const Login = () => {
     <div className="absolute top-[180px] left-[28px] bg-white/10   -rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-medium">
    🍿	Movie Buddy
    </div>
-   <div className="absolute top-[500px] left-[1200px] -rotate-12 bg-white/10 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast">
+   <div className="absolute top-[500px] left-[1200px] -rotate-12 bg-white/10 text-white  backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast ">
 🗺️	Explore Together
    </div>
  </div>
