@@ -70,13 +70,13 @@ const Login = () => {
 
  <div className="absolute  hidden lg:block inset-0 -z-10">
    {/* Floating Cards */}
-  <div className="absolute top-[430px] left-[200px] transform rotate-10 bg-white/10 text-white backdrop-blur-sm px-4 py-4 rounded-lg shadow-md animate-float-slow">
+  <div className="absolute top-[430px] left-[200px] transform rotate-10 bg-white/10 text-white backdrop-blur-sm px-4 py-4 rounded-lg shadow-md animate-float-fast">
    💘 Looking for Love
  </div>
-   <div className="absolute top-[230px] left-[1200px] bg-white/10   rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-medium">
+   <div className="absolute top-[230px] left-[1200px] bg-white/10   rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast">
      🧠 Deep Conversations
    </div>
-    <div className="absolute top-[180px] left-[28px] bg-white/10   -rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-medium">
+    <div className="absolute top-[180px] left-[28px] bg-white/10   -rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast">
    🍿	Movie Buddy
    </div>
    <div className="absolute top-[500px] left-[1200px] -rotate-12 bg-white/10 text-white  backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast ">

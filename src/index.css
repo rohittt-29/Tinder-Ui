@@ -65,7 +65,7 @@
   animation: floatMedium 8s ease-in-out infinite;
 }
 .animate-float-fast {
-  animation: floatFast 6s ease-in-out infinite;
+  animation: floatFast 5s ease-in-out infinite;
 }
 .animate-pulse-border {
   animation: pulseBorder 3s ease-in-out infinite;
