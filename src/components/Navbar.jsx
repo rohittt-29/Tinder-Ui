@@ -42,7 +42,7 @@ const Navbar = () => {
    </div>
    <div className="flex gap-2">
     
-     {user && ( <div className="dropdown dropdown-bottom mx-10 flex items-center gap-4">
+     {user && ( <div className="dropdown dropdown-bottom mx-2 md:mx-10 flex items-center gap-3">
        <p >Welcome {user.firstName}</p>
        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         
