@@ -46,18 +46,18 @@ const Requests = () => {
   return (
     
     <div>
-     <div className=' text-center my-3 mb-40 md:my-10'>
-        <h1 className='font-bold  w-fit  mx-auto italic mb-4 px-4 py-2 md:p-2 text-xl md:text-3xl border-b-2 border-purple-600'>Requests</h1>
+     <div className=' text-center  mb-40 md:my-10'>
+        <h1 className='font-bold  w-fit  mx-auto italic mb-4 px-4 py-1 md:p-2 text-xl md:text-3xl border-b-2 border-purple-600'>Requests</h1>
         {request.map((req)=>{
             const {_id,firstName, lastName , photoUrl, age , gender, about} = req.fromUserId;
             return(
               <div key={_id} className='relative flex flex-col md:m-4 mx-2  p-2 md:p-4 rounded-lg border-1 border-gray-800 bg-base-200 mb-5 md:w-1/2 md:mx-auto'>
   <div className='flex items-start gap-4'>
-   <div className='w-[30px] h-[30px] md:w-[60px] md:h-[60px] flex-shrink-0'>
+   <div className='w-[50px] h-[50px] md:w-[60px] md:h-[60px] flex-shrink-0'>
       <img src={photoUrl} alt="photo" className='w-full h-full object-cover rounded-full' />
     </div>
 
-    <div className='text-left flex-1'>
+    <div className='text-left flex-1 w-2/3 md:w-4/5'>
       <h2 className='font-normal md:font-bold text-xl md:text-2xl'>{firstName + " " + lastName}</h2>
       {age && gender && <h3>{age + ", " + gender}</h3>}
       <p className='italic text-xl text-gray-400 break-words mt-1'>

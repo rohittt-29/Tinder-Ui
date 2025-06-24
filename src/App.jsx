@@ -11,13 +11,15 @@ import Feed from './components/Feed';
 import Connections from './components/Connections';
 import Requests from './components/Requests';
 import Chat from './components/Chat';
+import Layout from './components/Layout';
 const App = () => {
   return (
 <>
 <Provider store={appStore}>
 <BrowserRouter basename='/'>
 <Routes>
-<Route path='/' element= {<Body/>}>
+
+<Route path='/' element= {<Layout/>}>
 <Route path='/' element={<Feed/>}/>
 <Route path='/login' element={<Login/>}/>
 <Route path='/profile' element={<Profile/>}/>
