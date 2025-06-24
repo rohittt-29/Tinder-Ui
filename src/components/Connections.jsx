@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { BASE_URL } from '../utils/Constant'
 import { useDispatch, useSelector } from 'react-redux'
 import { addConnection } from '../utils/connectionSlice'
+import { Link } from 'react-router-dom'
 
 
 const Connections = () => {
@@ -41,7 +42,7 @@ const Connections = () => {
         {connection.map((con)=>{
             const {_id,firstName, lastName , photoUrl, age , gender, about} = con;
             return(
-            <div key={_id} className='flex items-start mx-2 my-2 p-2 md:m-4 md:p-4   rounded-lg border-1 border-gray-800 bg-base-200 mb-5 w-full  md:w-1/2 md:mx-auto'>
+            <div key={_id} className='flex relative  items-start mx-2 my-2 p-2 md:m-4 md:p-4   rounded-lg border-1 border-gray-800 bg-base-200 mb-5 w-full  md:w-1/2 md:mx-auto'>
   <div className='w-[60px] h-[60px] flex-shrink-0'>
     <img
       src={photoUrl}
@@ -49,12 +50,16 @@ const Connections = () => {
       className='w-full h-full object-cover rounded-full'
     />
   </div>
-  <div className='mx-3 text-left'>
+  <div className='mx-3  md:w-4/5 text-left'>
     <h2 className='font-bold text-2xl'>{firstName + " " + lastName}</h2>
     {age && gender && <h3>{age + ", " + gender}</h3>}
-    <p className='italic text-xl text-gray-400'>{about}</p>
+    <p className='italic  text-xl text-gray-400'> {about.length > 80 ? about.slice(0, 80) + '...' : about}</p>
   </div>
+  <Link to={"/chat/" + _id}><div className='absolute right-1 bottom-0 w-14 h-14 m-2 flex justify-center bg-rose-500 hover:scale-110 transition duration-200 cursor-pointer items-center rounded-full border-3 border-gray-800 p-2' ><i className="ri-send-plane-fill hover:scale-110 transition duration-500 text-2xl "></i>
+  </div>
+  </Link>
 </div>
+
 
             )
         })}

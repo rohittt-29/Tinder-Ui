@@ -21,10 +21,10 @@ const Feed = () => {
 
   useEffect(() => {
     // Fetch feed only if it's empty
-    if (!feed || feed.length === 0) {
+    // if (!feed || feed.length === 0) {
       getFeed();
-    }
-  }, [feed]);
+    // }
+  }, []);
 
 if (!feed)
   return (
