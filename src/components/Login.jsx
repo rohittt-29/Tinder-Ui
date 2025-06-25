@@ -5,6 +5,7 @@ import { addUser } from '../utils/UserSlice';
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../utils/Constant';
 import Bg from "../assets/Bg.png"
+import Squares from './Sqaures';
 
 const Login = () => {
   const [signup , setsignup] = useState(false)
@@ -56,37 +57,21 @@ const Login = () => {
   return (
     <div className='flex justify-center  mb-5'>
 <div
-  className="absolute inset-0 -z-10 animate-[bgPulse_6s_ease-in-out_infinite]"
-  style={{
-    backgroundImage: `
-      linear-gradient(to right, rgba(30, 64, 175, 0.2) 2px, transparent 1px),
-      linear-gradient(to bottom, rgba(30, 64, 175, 0.2) 2px, transparent 1px)
-    `,
-    backgroundSize: '40px 40px',
-    backgroundColor: '#0a0a0a',
-    filter: 'drop-shadow(0 0 10px rgba(30, 64, 175, 0.1))',
-  }}
+  className="absolute inset-0 -z-1 ">
+<Squares 
+speed={0.4} 
+squareSize={45}
+direction='down' // up, down, left, right, diagonal
+borderColor='#434343'
+hoverFillColor='#E4287D'
 />
-
- <div className="absolute  hidden lg:block inset-0 -z-10">
-   {/* Floating Cards */}
-  <div className="absolute top-[430px] left-[200px] transform rotate-10 bg-white/10 text-white backdrop-blur-sm px-4 py-4 rounded-lg shadow-md animate-float-fast">
-   💘 Looking for Love
- </div>
-   <div className="absolute top-[230px] left-[1200px] bg-white/10   rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast">
-     🧠 Deep Conversations
-   </div>
-    <div className="absolute top-[180px] left-[28px] bg-white/10   -rotate-20 text-white backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast">
-   🍿	Movie Buddy
-   </div>
-   <div className="absolute top-[500px] left-[1200px] -rotate-12 bg-white/10 text-white  backdrop-blur-sm px-4 py-2 rounded-xl shadow-md animate-float-fast ">
-🗺️	Explore Together
-   </div>
- </div>
+</div>
 
 
-      <div className='absolute top-0 left-0 w-full h-full bg-black/40 -z-10'></div>
-<div className="card w-96 bg-gray-1000 backdrop-blur-md border-2 border-gray-800 shadow-lg -z-0 rounded-lg md:mt-2 mt-13 ]">
+
+
+      <div className='absolute top-0 left-0 w-full h-full bg-purple-950/20 -z-10'></div>
+<div className="card w-96 bg-black backdrop-blur-md border-2 border-gray-800 shadow-lg  rounded-lg md:mt-2 mt-13 ]">
 
 
   <div className="card-body ">

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full bg-base-100 border-t-1 border-rose-500 bg-gradient-to-tl from-purple-600/15 text-neutral-content px-4 py-6   fixed bottom-0 p-4">
       
       {/* Top Left - Copyright */}
-      <div className="absolute top-2 left-4 font-semibold text-sm md:text-base">
+      <div className="absolute top-2 left-4 font-light text-sm md:text-base">
         © {new Date().getFullYear()}Togetha. All rights reserved.
       </div>
 
@@ -13,9 +13,9 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center text-center space-y-1 mt-4 mb-1 md:mt-1 md:mb-1 ">
        
         <p className="text-sm opacity-80">
-           Brought to you from Mumbai with <i className="ri-heart-3-fill text-red-400 md:text-xl text-sm animate-pulse drop-shadow-[0_0_5px_red]"></i> by <strong>Rohit Mali</strong>.
+           Built with <i className="ri-heart-3-fill text-rose-500 md:text-sm text-sm "></i> in Mumbai by  <a href="https://www.linkedin.com/in/rohit-mali-163267257/overlay/contact-info/"><span className='text-pink-400 font-semibold font-sans ' > this guy</span></a>
         </p>
-        <p className="text-pink-400 font-medium italic"> Let’s get Togetha...</p>
+          <p className="text-pink-400 font-normal italic md:mb-0 mb-4">  Life’s better when we’re Togetha. </p>
       </div>
 
       {/* Social Links */}

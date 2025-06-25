@@ -12,7 +12,7 @@ const Body = () => {
   const navigate = useNavigate();
   const location = useLocation();
 const hideFooter = location?.pathname?.startsWith('/chat');
-
+const isChatPage = location.pathname.startsWith('/chat/');
   const userdata = useSelector((store)=> store.user)
   const fetchUser = async()=>{
     if(userdata) return;
@@ -37,7 +37,7 @@ const hideFooter = location?.pathname?.startsWith('/chat');
     <div>
       
       <Navbar/>
-      <div className='mb-20'>
+      <div className={isChatPage? '': "mb-20"}>
       <Outlet/>
       </div>
        {!hideFooter && <Footer/>}
