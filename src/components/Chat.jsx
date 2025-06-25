@@ -80,9 +80,13 @@ const Chat = () => {
     }
 
   return (
+    <div>
+              <h1 className='font-bold  w-fit mx-auto italic md:p-2 text-xl md:text-3xl  border-b-2 border-purple-600 bg-gradient-to-l '>Messages</h1>
     <div className='flex flex-col md:border-1 md:border-gray-700 h-screen md:h-[80vh] md:my-5  w-full md:w-1/2 mx-auto'>
+      
       <div className=' flex justify-between border-b-2 border-gray-800 '>
-   <h1 className='p-3 '>you are chatting with {targetUser?.firstName || "user"}</h1>
+<h1 className="p-3 text-lg font-light ">Chatting with <span className='font-semibold'>{targetUser?.firstName || "someone"}</span></h1>
+
    <i onClick={()=>navigate("/connections")} className="ri-close-large-fill p-3 text-xl cursor-pointer  hover:scale-150 transition duration-200"></i></div>
    <div className='flex-1 p-2 md:p-5 overflow-scroll'>
     {message.map((msg,index)=>{
@@ -116,7 +120,7 @@ const Chat = () => {
   className=' flex-1  p-2 outline-none  rounded-lg' placeholder='Type a Message' type="text" />
   <button onClick={sendMessage} className='px-5 py-2 md:px-6 md:py-2 cursor-pointer hover:bg-rose-400  bg-gray-600 text-white rounded-full'>Send</button>
   </div>
- 
+ </div>
     </div>
   )
 }

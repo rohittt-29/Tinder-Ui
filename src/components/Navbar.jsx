@@ -63,6 +63,12 @@ const Navbar = () => {
              <span className="badge">New</span>
            </Link>
          </li>
+            <li>
+           <Link to='/' className="justify-between">
+          Feed
+          
+           </Link>
+         </li>
           <li>
            <Link to='/connections' className="justify-between">
             My connections
@@ -75,8 +81,9 @@ const Navbar = () => {
           
            </Link>
          </li>
+       
          
-         <li onClick={handleLogout}><a>Logout</a></li>
+         <li onClick={handleLogout}><a className='text-red-500'>Logout</a></li>
        </ul>
      </div>
      )}

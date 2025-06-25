@@ -59,7 +59,7 @@ const Login = () => {
 <div
   className="absolute inset-0 -z-1 ">
 <Squares 
-speed={0.4} 
+speed={0.7} 
 squareSize={45}
 direction='down' // up, down, left, right, diagonal
 borderColor='#434343'

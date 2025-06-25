@@ -13,16 +13,16 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center text-center space-y-1 mt-4 mb-1 md:mt-1 md:mb-1 ">
        
         <p className="text-sm opacity-80">
-           Built with <i className="ri-heart-3-fill text-rose-500 md:text-sm text-sm "></i> in Mumbai by  <a href="https://www.linkedin.com/in/rohit-mali-163267257/overlay/contact-info/"><span className='text-pink-400 font-semibold font-sans ' > this guy</span></a>
+           Built with <i className="ri-heart-3-fill text-rose-500 md:text-sm text-sm "></i> in Mumbai by  <a href="https://www.linkedin.com/in/rohit-mali-163267257"><span className='text-pink-400 font-semibold font-sans ' > This guy</span></a>
         </p>
-          <p className="text-pink-400 font-normal italic md:mb-0 mb-4">  Life’s better when we’re Togetha. </p>
+         
       </div>
 
       {/* Social Links */}
       <nav
         className={`
-          absolute bottom-2
-          ${window.innerWidth < 640 ? 'right-4' : 'left-4'}
+          absolute bottom-0
+          ${window.innerWidth < 740 ? 'right-4' : 'left-4'}
           flex gap-4 text-lg text-gray-400
         `}
       >
