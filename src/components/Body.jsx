@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Navbar from './Navbar'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate, useLocation } from 'react-router-dom'
 import Footer from './Footer'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
@@ -10,6 +10,9 @@ import { addUser } from '../utils/UserSlice'
 const Body = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+const hideFooter = location?.pathname?.startsWith('/chat');
+
   const userdata = useSelector((store)=> store.user)
   const fetchUser = async()=>{
     if(userdata) return;
@@ -37,7 +40,7 @@ const Body = () => {
       <div className='mb-20'>
       <Outlet/>
       </div>
-      <Footer/>
+       {!hideFooter && <Footer/>}
       
     </div>
   )
