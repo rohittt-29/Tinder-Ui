@@ -31,7 +31,9 @@ const Chat = () => {
   console.log(chat.data.messages);
   const chatmessage =chat?.data?.messages.map((msg)=>{
     return {
-      firstName: msg.senderId.firstName, text: msg.text
+      firstName: msg.senderId.firstName, 
+      text: msg.text,
+      time: new Date(msg.createdAt).toLocaleTimeString([],{hour:'2-digit' , minute:'2-digit'})
     }
   });
   setmessage(chatmessage)
@@ -103,10 +105,10 @@ const Chat = () => {
   </div>
   <div className="chat-header">
  {msg.firstName}
-    <time className="text-xs opacity-50">12:45</time>
+    <time className="text-xs opacity-50">{msg.time}</time>
   </div>
   <div className="chat-bubble">{msg.text}</div>
-  <div className="chat-footer opacity-50">Delivered</div>
+  
 </div>
 </div>
 
