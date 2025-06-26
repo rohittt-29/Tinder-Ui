@@ -1,12 +1,41 @@
-# React + Vite
+# 🫂 Togetha
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> *Life’s better when we’re Togetha.* ❤️
 
-Currently, two official plugins are available:
+**Togetha** is a real-time chat and connection platform. Built for fun interactions, profile swipes, and seamless chatting — all in one slick UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Live Demo**: [https://togetha-web.vercel.app](https://togetha-web.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS, DaisyUI, Redux
+- **Backend**: Node.js, Express.js, MongoDB
+- **WebSocket**: Socket.io for real-time messaging
+- **Deployment**: Vercel (frontend) & Render (backend)
+
+---
+
+## ✨ Features
+
+- 🔐 **User Authentication** (Sign up / Login)
+- 🧑‍💼 **Create and Edit Profile**
+- 💌 **Swipe-based Match System**
+  - 👉 Swipe **Right** to Like
+  - 👈 Swipe **Left** to Reject/Ignore
+- 💬 **Real-time One-to-One Chat**
+- 📸 **Profile Cards UI**
+- 📂 **Persistent Connections & Messages**
+
+---
+
+
+
+
+## 🔧 Frontend Setup
+
+```bash
+cd togetha-ui
+npm install
+npm run dev
