@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center text-center space-y-1 mt-4 mb-1 md:mt-1 md:mb-1 ">
        
         <p className="text-sm opacity-80">
-           Built with <i className="ri-heart-3-fill text-rose-500 md:text-sm text-sm "></i> in Mumbai by  <a href="https://www.linkedin.com/in/rohit-mali-163267257"><span className='text-pink-400 font-semibold font-sans ' > This guy</span></a>
+           Built with <i className="ri-heart-3-fill text-rose-500 md:text-sm text-sm "></i> in Mumbai by  <a href="https://rohit-mali-portfolio.vercel.app/"><span className='text-pink-400 font-semibold font-sans ' > This guy</span></a>
         </p>
          
       </div>
